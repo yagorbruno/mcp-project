@@ -7,6 +7,31 @@ MCP Chat is a command-line interface application that enables interactive chat c
 - Python 3.9+
 - Anthropic API Key
 
+## Stack
+
+### Secrets Manager
+ **Doppler** [🔗](https://dashboard.doppler.com/workplace/554bc3afaad7733bfc0c/projects/mcp-project)
+
+#### Setup
+```bash
+winget install doppler.doppler
+```
+```bash
+doppler login
+```
+Inside project folder
+```bash
+doppler setup
+```
+- Select a project: **mcp-project**
+- Select a config: **dev**
+
+```bash
+doppler run -- python main.py
+```
+
+
+
 ## Setup
 
 ### Step 1: Configure the environment variables
