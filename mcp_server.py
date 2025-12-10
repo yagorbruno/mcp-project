@@ -40,7 +40,6 @@ def edit_document(
         raise ValueError(f"Doc with id {doc_id} not found")
     
     docs[doc_id] = docs[doc_id].replace(old_string, new_string)
-    return docs
 
 # TODO: Write a resource to return all doc id's
 # TODO: Write a resource to return the contents of a particular doc
