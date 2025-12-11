@@ -102,6 +102,11 @@ python main.py
 
 ## Usage
 
+### Starting MCP Inspector
+```bash
+mcp dev mcp_server.py
+```
+
 ### Basic Interaction
 
 Simply type your message and press Enter to chat with the model.
