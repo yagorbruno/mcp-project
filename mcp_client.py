@@ -62,8 +62,8 @@ class MCPClient:
         return []
 
     async def read_resource(self, uri: str) -> Any:
-        result = await self.session().read_resource(AnyUrl.parse(uri))
-        resource = result.content[0]
+        result = await self.session().read_resource(AnyUrl(uri))
+        resource = result.contents[0]
 
         if isinstance(resource, types.TextResourceContents):
             if resource.mimeType == "application/json":
