@@ -10,12 +10,21 @@ from core.claude import Claude
 from core.cli_chat import CliChat
 from core.cli import CliApp
 
+import os
+import anthropic
+from braintrust import init_logger, wrap_anthropic
+
 load_dotenv()
 
 # Anthropic Config
+client = wrap_anthropic(
+  anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+)
+
+logger = init_logger(project="mcp-project")
+
 claude_model = os.getenv("CLAUDE_MODEL", "")
 anthropic_api_key = os.getenv("ANTHROPIC_API_KEY", "")
-
 
 assert claude_model, "Error: CLAUDE_MODEL cannot be empty. Update .env"
 assert anthropic_api_key, (
@@ -25,6 +34,9 @@ assert anthropic_api_key, (
 
 async def main():
     claude_service = Claude(model=claude_model)
+
+    logger.log("Starting MCP clients...")
+    logger.log(f"Claude model: {claude_model}")
 
     server_scripts = sys.argv[1:]
     clients = {}

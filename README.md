@@ -12,6 +12,9 @@ MCP Chat is a command-line interface application that enables interactive chat c
 ### Sorce control
 **Github**[🔗](https://github.com/yagorbruno/mcp-project)
 
+### LLM Observability
+**braintrust**[🔗](https://www.braintrust.dev/app/starbase-one/p/mcp-project)
+
 ### Project Management 
 **Linear**[🔗](https://linear.app/starbase-one/project/mcp-project-07bf259e08c7/overview)
 
